@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+
+<title>Lazada Vs Shopee</title>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
+
+
+<style>
+/* Style The Body */
+body {
+	font-family: Courier New;
+	margin: 0;
+}
+
+/* Header/Logo Title */
+.header{
+	padding: 10px;
+	text-align: left;
+	background: #FFFFFF;
+	color: White;
+	font-size: 15px;
+	font-weight: 1000;
+}
+/* Page Content */
+.content{padding:10px;}
+</style>
+</head>
+
+
+
+<body>
+
+<div class="header">
+	<img src="/static/img.png" alt="LAZADA VS SHOPEE" style="width:200px;height:140px;">
+	
+	
+	</div>
+
+{% block header %}{% endblock %}
+
+
+<div class="content">
+<form action="result" method="post">
+	<p>What Do You Want To Search?</p>
+	<p><input type="text" name="searchinput" /></p>
+	<p><input type="submit" value="submit" onclick="loading()"/></p>
+
+</form>
+
+
+
+
+</div>
+
+<h1 id="load"></h1>
+<script>
+function loading(){
+document.getElementById("load").innerHTML="LOADING....";
+}
+</script>
+
+{% block content %}{% endblock %}
+
+</body>
+
+
+</html>
+	
+		

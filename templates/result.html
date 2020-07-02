@@ -1,0 +1,28 @@
+<!doctype html>
+{% extends 'home_trial.html' %}
+
+{% block header %}
+{% endblock %}
+<body>
+{% block content %}
+<ol>
+
+{%for i in range(0,lenl)%}
+	
+    	<li>
+	<p>{{titlel[i]}}</p>
+	<p>{{pricel[i]}}</p>
+	<p>{{locl[i]}}</p>
+	</li>
+{%endfor%}
+</ol>
+{% endblock %}
+
+
+
+<form action="/" method="get">
+<p><input type="submit" value="Back"/></p>
+</form>
+
+</body>
+</html>

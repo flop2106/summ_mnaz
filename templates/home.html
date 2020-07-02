@@ -1,0 +1,41 @@
+<!doctype html>
+{% extends 'template.html' %}
+
+<body>
+{% block content %}
+
+<ol style="color:black;font-size:12px;">
+{%for i in range(0,href|length)%}
+	{%if summarize[i]!=[] and lenghtsumm[i]|int > 50 %}
+		<li>
+		<h3 style="color:blue; font-size:15px;"><a href={{href[i]}}>{{titlel[i].upper()}}</a></h3>
+		<p style="color:grey;font-size:12px;">{{href[i]}}</p>
+		<button class="collapsible">Summary</button>
+		<div class="content">
+		<p> </p>
+		
+		<p> </p>
+		{% for k in range(0,summ_r[i]|length) %}
+			<p style="color:black;font-size:12px;font-weight: bold;">{{summ_r[i][k]}}</p>
+		{%endfor%}	
+		<p> </p>
+		{% if lists[i] !=[] and lists[i]|length>2 %}
+			{% for j in range(0,lists[i]|length) %}
+				<p>{{lists[i]|length}}</p>
+				<p style="color:black;font-size:12px;">{{lists[i][j]}}</p>
+			{%endfor%}	
+		{%endif%}
+		<p> </p>
+		<p style="color:black;font-size:12px;">{{key[i]}}</p>
+		<p style="color:black;font-size:12px;">{{lenghtsumm[i]}}% Summarized</p>
+		</div>
+		</li>
+
+	{%endif%}
+{%endfor%}	
+</ol>
+
+{% endblock %}
+
+</body>
+</html>
